@@ -94,8 +94,25 @@
   /**
    * Back to top button
    */
+  let floatingbutton = select('.floating-button')
+  if (floatingbutton) {
+    floatingbutton.classList.add('active')
+    const replace = () => {
+      if (window.scrollY > 100) {
+        floatingbutton.style.bottom = "64px"; 
+      } else {
+        floatingbutton.style.bottom = "15px"; 
+      }
+    }
+    window.addEventListener('load', replace)
+    onscroll(document, replace)
+  }
+  /**
+   * Back to top button
+   */
   let backtotop = select('.back-to-top')
   if (backtotop) {
+    // console.log(backtotop);
     const toggleBacktotop = () => {
       if (window.scrollY > 100) {
         backtotop.classList.add('active')
