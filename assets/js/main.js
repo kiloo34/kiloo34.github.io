@@ -218,6 +218,39 @@
     }
   });
 
+  new Swiper('.products-slider', {
+    speed: 1000,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false
+    },
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 40
+      },
+      480: {
+        slidesPerView: 1,
+        spaceBetween: 60
+      },
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 80
+      },
+      992: {
+        slidesPerView: 1,
+        spaceBetween: 120
+      }
+    }
+  });
+
   /**
    * Porfolio isotope and filter
    */
